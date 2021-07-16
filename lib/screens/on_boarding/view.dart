@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ramadan/const/color.dart';
 import 'package:ramadan/screens/home_page/view.dart';
 import 'package:ramadan/widgets/custom_bold_text.dart';
-import 'package:ramadan/widgets/custom_normal_text.dart';
+import 'package:ramadan/widgets/custom_dark_text.dart';
+import 'package:ramadan/widgets/custom_text.dart';
 
 class OnBoarding extends StatelessWidget {
   @override
@@ -38,7 +39,7 @@ class OnBoarding extends StatelessWidget {
                     ),
                     Padding(
                       padding: EdgeInsets.all(20),
-                      child: CustomNormalText(
+                      child: defaultDarkText(
                         text:
                             'When the month of Ramadan starts, the gates of heaven are opened and the gates of hell are closed ',
                       ),
@@ -61,9 +62,8 @@ class OnBoarding extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: kAccentColor,
                                 borderRadius: BorderRadius.circular(20)),
-                            child: Text(
-                              "Let’s get started",
-                              style: TextStyle(color: Colors.white),
+                            child: defaultText(
+                              text: "Let’s get started",
                             ),
                           ),
                         )

@@ -2,13 +2,18 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ramadan/const/color.dart';
-import 'package:ramadan/widgets/custom_bold_text.dart';
-import 'package:ramadan/widgets/custom_normal_text.dart';
 
 class DuaaPage extends StatefulWidget {
   @override
   _DuaaPageState createState() => _DuaaPageState();
+}
+
+class DuaaModel {
+  final Icon icon;
+  final String title;
+  final String subtitle;
+
+  DuaaModel({required this.icon, required this.subtitle, required this.title});
 }
 
 class _DuaaPageState extends State<DuaaPage>
@@ -25,46 +30,45 @@ class _DuaaPageState extends State<DuaaPage>
   Widget build(BuildContext context) {
     List<DuaaModel> model = [
       DuaaModel(
-      icon: Icon(Icons.ac_unit),
-        title:"Al-Fatihah",
+        icon: Icon(Icons.ac_unit),
+        title: "Al-Fatihah",
         subtitle: "Makkiyah - 7 Ayah",
       ),
       DuaaModel(
-      icon: Icon(Icons.ac_unit),
-        title:"Al-Baqarah",
+        icon: Icon(Icons.ac_unit),
+        title: "Al-Baqarah",
         subtitle: "Maddaniyah - 266 Ayah",
       ),
       DuaaModel(
-      icon: Icon(Icons.ac_unit),
-        title:"Aali Imran",
+        icon: Icon(Icons.ac_unit),
+        title: "Aali Imran",
         subtitle: "Maddaniyah - 200 Ayah",
       ),
       DuaaModel(
-      icon: Icon(Icons.ac_unit),
-        title:"An-Nisa",
+        icon: Icon(Icons.ac_unit),
+        title: "An-Nisa",
         subtitle: "Maddaniyah - 176 Ayah",
       ),
       DuaaModel(
-      icon: Icon(Icons.ac_unit),
-        title:"Al-Ma`idah",
+        icon: Icon(Icons.ac_unit),
+        title: "Al-Ma`idah",
         subtitle: "Maddaniyah - 120 Ayah",
       ),
       DuaaModel(
-      icon: Icon(Icons.ac_unit),
-        title:"Al-An`am",
+        icon: Icon(Icons.ac_unit),
+        title: "Al-An`am",
         subtitle: "Makkiyah - 165 Ayah",
       ),
       DuaaModel(
-      icon: Icon(Icons.ac_unit),
-        title:"Al-A`raf",
+        icon: Icon(Icons.ac_unit),
+        title: "Al-A`raf",
         subtitle: "Makkiyah - 206 Ayah",
       ),
       DuaaModel(
-      icon: Icon(Icons.ac_unit),
-        title:"Al-Anfal",
+        icon: Icon(Icons.ac_unit),
+        title: "Al-Anfal",
         subtitle: "Maddaniyah - 75 Ayah",
       ),
-
     ];
 
     return Scaffold(
@@ -145,7 +149,9 @@ Widget BuildDuaaList(DuaaModel duaaModel) => Padding(
             radius: 15,
             child: duaaModel.icon,
           ),
-          SizedBox(width: 10,),
+          SizedBox(
+            width: 10,
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -162,11 +168,3 @@ Widget BuildDuaaList(DuaaModel duaaModel) => Padding(
         ],
       ),
     );
-
-class DuaaModel {
-  final Icon icon;
-  final String title;
-  final String subtitle;
-
-  DuaaModel({required this.icon, required this.subtitle, required this.title});
-}

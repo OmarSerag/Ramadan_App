@@ -3,37 +3,38 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ramadan/const/color.dart';
-import 'package:ramadan/const/color.dart';
-import 'package:ramadan/const/color.dart';
 import 'package:ramadan/screens/duaa_page/view.dart';
 import 'package:ramadan/widgets/custom_bold_text.dart';
-import 'package:ramadan/widgets/custom_normal_text.dart';
+import 'package:ramadan/widgets/custom_dark_text.dart';
+import 'package:ramadan/widgets/custom_text.dart';
 
 class HomePage extends StatelessWidget {
   List MyModel = [
     Container(
-      padding: EdgeInsets.all(10.0),
+      padding: EdgeInsets.all(20.0),
       clipBehavior: Clip.none,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30), color: Colors.indigo[50]),
+        borderRadius: BorderRadius.circular(30),
+        color: Colors.blueGrey[200],
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Sahar Time",
-            style: TextStyle(fontSize: 20),
+          defaultText(
+            text: "Sahar Time",
           ),
           SizedBox(
             height: 10,
           ),
           Row(
             children: [
-              Text(
-                "4:08",
-                style: TextStyle(fontSize: 20),
+              defaultText(
+                text: "4:08",
               ),
-              Text("am"),
+              defaultText(
+                text: "am",
+              ),
             ],
           ),
           SizedBox(
@@ -62,27 +63,23 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Next Player",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+          defaultText(
+            text: "Next Player",
           ),
           SizedBox(height: 10),
-          Text(
-            "Duhur",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+          defaultText(
+            text: "Duhur",
           ),
           SizedBox(
             height: 10,
           ),
           Row(
             children: [
-              Text(
-                "4:08",
-                style: TextStyle(color: Colors.white, fontSize: 20),
+              defaultText(
+                text: "4:08",
               ),
-              Text(
-                "am",
-                style: TextStyle(color: Colors.white),
+              defaultText(
+                text: "am",
               ),
               SizedBox(width: 40),
               Expanded(
@@ -109,27 +106,25 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Player Time",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+          defaultText(
+            text: "Player Time",
           ),
-          SizedBox(height: 10),
-          Text(
-            "Asr",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+          SizedBox(
+            height: 10,
+          ),
+          defaultText(
+            text: "Asr",
           ),
           SizedBox(
             height: 25,
           ),
           Row(
             children: [
-              Text(
-                "3:49",
-                style: TextStyle(color: Colors.white, fontSize: 20),
+              defaultText(
+                text: "3:49",
               ),
-              Text(
-                "pm",
-                style: TextStyle(color: Colors.white, fontSize: 20),
+              defaultText(
+                text: "pm",
               ),
             ],
           ),
@@ -145,29 +140,25 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Breakfast",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+          defaultText(
+            text: "Breakfast",
           ),
-          SizedBox(height: 10),
-          Text(
-            "Maghrib",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+          SizedBox(
+            height: 10,
+          ),
+          defaultText(
+            text: "Maghrib",
           ),
           SizedBox(
             height: 25,
           ),
           Row(
             children: [
-              Text(
-                "3:49",
-                style: TextStyle(color: Colors.white, fontSize: 20),
+              defaultText(
+                text: "3:49",
               ),
-              Text(
-                "pm",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+              defaultText(
+                text: "pm",
               ),
             ],
           ),
@@ -180,12 +171,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(35.0),
         child: Column(
           children: [
             Container(
               child: ListTile(
-                title: CustomBoldText(
+                title: defaultDarkText(
                   text: "Saturday, Apr 24",
                 ),
                 subtitle: Text(
@@ -211,34 +202,26 @@ class HomePage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Maghrib",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
+                  defaultText(
+                    text: "Maghrib",
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "6:42",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
+                      defaultText(
+                        text: "6:42",
                       ),
-                      Text(
-                        "PM",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
+                      defaultText(
+                        text: "PM",
                       )
                     ],
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -247,9 +230,8 @@ class HomePage extends StatelessWidget {
                         size: 15,
                         color: Colors.white,
                       ),
-                      Text(
-                        "Al Ain, United Arab Emirates",
-                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      defaultText(
+                        text: "Al Ain, United Arab Emirates",
                       ),
                     ],
                   ),
@@ -286,7 +268,7 @@ class HomePage extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(10.0),
                 height: MediaQuery.of(context).size.height / 8,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -297,24 +279,19 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Daily Duaa",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
+                    defaultDarkText(
+                      text: "Daily Duaa",
                     ),
-                    Text(
-                      "i ask forgiveness from Allah,my Lord,from every sin i committed",
-                      maxLines: 2,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
+                    defaultDarkText(
+                      text:
+                          "i ask forgiveness from Allah, my"
                     ),
+                    defaultDarkText(
+                        text:
+                        "Lord, from every sin i committed"
+                    ),
+
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         TextButton(
                           onPressed: () {
@@ -330,10 +307,10 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(color: Colors.orange),
                           ),
                         ),
+                        SizedBox(width: 80,),
                         Image.asset(
                           "images/Group-1.png",
-                          width: 70,
-                          height: 50,
+                          width: MediaQuery.of(context).size.width/4
                         ),
                       ],
                     )
